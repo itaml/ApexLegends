@@ -1,0 +1,28 @@
+@startuml
+class com.example.kotlinhandbook.ViewSection {
+~ WebView webView
+~ String fileName
+# void onCreate(Bundle)
+}
+class com.example.kotlinhandbook.MainActivity {
+~ DbHelper db
+~ Cursor cr
+~ SimpleCursorAdapter sCr
+~ ListView lvList
+~ EditText edFind
+# void onCreate(Bundle)
+~ void loadData(String)
+}
+class com.example.kotlinhandbook.DbHelper {
+- {static} String DB_NAME
+~ Context context
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
++ Cursor query(String)
+}
+
+
+androidx.appcompat.app.AppCompatActivity <|-- com.example.kotlinhandbook.ViewSection
+androidx.appcompat.app.AppCompatActivity <|-- com.example.kotlinhandbook.MainActivity
+android.database.sqlite.SQLiteOpenHelper <|-- com.example.kotlinhandbook.DbHelper
+@enduml

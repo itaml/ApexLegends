@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kotlin Handbook</string>
+    <string name="hintFindStr">Введите текст для поиска..</string>
+    <string name="textViewChapter">Главы:</string>
+</resources>
