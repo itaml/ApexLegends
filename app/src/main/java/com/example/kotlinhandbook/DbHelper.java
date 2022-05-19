@@ -16,7 +16,7 @@ import java.util.List;
 
 public class DbHelper extends SQLiteOpenHelper {
     //имя файла
-    private static String DB_NAME = "db.sqlite3";
+    private static String DB_NAME = "db.sqlite2";
     //контекст бд
     final Context context;
 
@@ -33,24 +33,9 @@ public class DbHelper extends SQLiteOpenHelper {
                 "'наименование' text NOT NULL," +
                 "'файл' text NOT NULL);");
 
-        db.execSQL("INSERT INTO Перечень('наименование','файл') values('Введение в язык Kotlin', 'introduction.html')," +
-               "('Первая программа на Kotlin в IntelliJ IDEA','first_prg.html')," +
-                "('Структура программы','program_struct.html')," +
-                "('Переменные','variables.html')," +
-                "('Типы данных','types.html')," +
-                "('Консольный ввод и вывод','console_io.html')," +
-                "('Операции с числами','arith.html')," +
-                "('Условные выражения','сonditional_expressions.html')," +
-                "('Условные конструкции','сonditional_constructs.html')," +
-                "('Циклы','cycles.html')," +
-                "('Диапазоны','ranges.html')," +
-                "('Массивы','arrays.html')," +
-                "('Функции и их параметры','functions.html')," +
-                "('Переменное количество параметров. Vararg','vararg.html')," +
-                "('Перегрузка функций','function_overloading.html')," +
-                "('Функции высокого порядка','high_order_functions.html')," +
-                "('Анонимные функции','anonymus_functions.html')," +
-                "('Лямбда-выражения','lambda_expression.html')");
+        db.execSQL("INSERT INTO Перечень('наименование','файл') values('Для начала', 'introduction.html')," +
+               "('Легенды','first_prg.html')," +
+                "('Оружие','program_struct.html')");
 
     }
     //перегруженный метод при обновлении бд

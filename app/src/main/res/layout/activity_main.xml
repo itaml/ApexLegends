@@ -3,35 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000000"
     android:orientation="vertical">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <EditText
-            android:id="@+id/edInput"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:ems="10"
-            android:gravity="start|top"
-            android:hint="@string/hintFindStr"
-            android:inputType="textMultiLine"
-            android:textSize="15sp" />
-
-    </LinearLayout>
+        android:layout_height="235dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewChapter" />
+        android:layout_height="40dp"
+        android:background="#000000"
+        android:gravity="center|left"
+        android:text="@string/textViewChapter"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <ListView
         android:id="@+id/lvList"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="437dp"
+        android:background="#000000">
+
+    </ListView>
 
 </LinearLayout>

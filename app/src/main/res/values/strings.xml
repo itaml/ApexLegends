@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kotlin Handbook</string>
+    <string name="app_name">Справочник Apex Legends</string>
     <string name="hintFindStr">Введите текст для поиска..</string>
-    <string name="textViewChapter">Главы:</string>
+    <string name="textViewChapter">Разделы:</string>
 </resources>

@@ -2,8 +2,11 @@ package com.example.kotlinhandbook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,9 +15,15 @@ import android.view.View;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 import android.widget.Toast;
+
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,27 +38,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edFind=(EditText) findViewById(R.id.edInput);
-        edFind.addTextChangedListener ( new TextWatcher() {
-
-            public void afterTextChanged ( Editable s ) {
-                //что-то делаем после изменения
-            }
-
-            public void beforeTextChanged ( CharSequence s, int start, int count, int after ) {
-                //что-то делаем до изменения
-            }
-
-            //пока текст меняется - загружаем данные
-            public void onTextChanged ( CharSequence s, int start, int before, int count ) {
-                loadData(s.toString());
-            }
-        });
-
         //ищем наши компоненты - списки вывода
         lvList = (ListView) findViewById(R.id.lvList);
         lvList.setAdapter(null);
-
+        ImageView imageView = findViewById(R.id.imageView3);
+        imageView.setImageResource(R.drawable.logo);
         //создаем обьект нашего класса для работы с бд
         db = new DbHelper(this);
 
